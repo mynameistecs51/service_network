@@ -59,7 +59,7 @@
             <div class="thumbnail">
                 <img src="<?php echo base_url().'image/pic_sele/network_admin.jpg';?>" alt="" style="width:320px; height:150px;">
                 <div class="caption">
-                    <h4 class="pull-right">$24.99</h4>
+                    <h4 class="pull-right">xxxB.-</h4>
                     <h4><a href="#">NetWork Admin</a>
                     </h4>
                     <p>ติดต่อหลังไมค์ <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
@@ -81,7 +81,7 @@
             <div class="thumbnail">
                <img src="<?php echo base_url().'image/pic_sele/network1.jpg';?>" alt="" style="width:320px; height:150px;">
                <div class="caption">
-                <h4 class="pull-right">$64.99</h4>
+                 <h4 class="pull-right">xxxB.-</h4>
                 <h4><a href="#">Network</a>
                 </h4>
                 <p>ติดต่อหลังไมค์</p>
@@ -103,7 +103,7 @@
         <div class="thumbnail">
             <img src="<?php echo base_url().'image/pic_sele/cctv.jpg';?>" alt="" style="width:320px; height:150px;">
             <div class="caption">
-                <h4 class="pull-right">$74.99</h4>
+                 <h4 class="pull-right">xxxB.-</h4>
                 <h4><a href="#">CCTV</a>
                 </h4>
                 <p>ติดต่อหลังไมค์</p>
@@ -125,7 +125,7 @@
         <div class="thumbnail">
             <img src="http://placehold.it/320x150" alt="">
             <div class="caption">
-                <h4 class="pull-right">$84.99</h4>
+                 <h4 class="pull-right">xxxB.-</h4>
                 <h4><a href="#">Fourth Product</a>
                 </h4>
                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -147,7 +147,7 @@
         <div class="thumbnail">
             <img src="http://placehold.it/320x150" alt="">
             <div class="caption">
-                <h4 class="pull-right">$94.99</h4>
+                 <h4 class="pull-right">xxxB.-</h4>
                 <h4><a href="#">Fifth Product</a>
                 </h4>
                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
