@@ -9,6 +9,7 @@
                     <?php echo anchor('admin_con',"Network_Admin",'class="list-group-item"');?>
                     <a href="#" class="list-group-item">Network </a>
                     <a href="#" class="list-group-item">กล้องวงจรปิด CCTV  3</a>
+                    <a href="#" class="list-group-item">ผลงานผ่านมา</a>
                 </div>
             </div>
 
@@ -25,13 +26,16 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                    <img  class="slide-image" src="<?php echo base_url().'image/pic_sele/network_admin.jpg';?>"  style="width:850px; height:300px;" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                    <img class="slide-image" src="<?php echo base_url().'image/pic_sele/network1.jpg';?>"  style="width:850px; height:300px;" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                    <img class="slide-image" src="<?php echo base_url().'image/pic_sele/cctv.jpg';?>"  style="width:850px; height:300px;" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="http://placehold.it/800x300" alt=""  style="width:850px; height:300px;">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
