@@ -8,10 +8,11 @@
                 <p class="lead">Support</p>
                 <div class="list-group">
                     <!-- <a href="index.php/admin_con" class="list-group-item">admin</a> -->
-                    <?php echo anchor('admin_con',"Network_Admin",'class="list-group-item"');?>
-                    <a href="#" class="list-group-item">Network </a>
-                    <a href="#" class="list-group-item">กล้องวงจรปิด CCTV  3</a>
-                    <a href="#" class="list-group-item">ผลงานผ่านมา</a>
+                    <?php echo anchor('service_con/show_detail/network_admin/',"Network_Admin",'class="list-group-item"');?>
+                    <?php echo anchor('service_con/show_detail/network/',"Network",'class="list-group-item"');?>
+                    <?php echo anchor('service_con/show_detail/cctv/',"CCTV",'class="list-group-item"');?>
+                    <?php echo anchor('service_con/show_detail/profile_ago/',"ผลงานที่ผ่านมา",'class="list-group-item"');?>
+                    
                 </div>
             </div>
         </div>
@@ -171,10 +172,7 @@
                 <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
                 <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
             </div>
-
         </div>
-
     </div>
-
 </div>
 <?php $this->load->view('footter');?>
