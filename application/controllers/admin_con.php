@@ -20,8 +20,9 @@ class Admin_con extends CI_Controller{
 		$this->load->view('admin/edit_admin',$data);
 	}
 
- function add_detail(){
- 	$this->load->model("admin_con",'',TRUE);
-
- }
+	function add_detail(){
+		$this->service_m->add_detail_db();
+		//$this->load->view('/admin/admin_con',$data);
+	}
 }
+?>

@@ -20,42 +20,35 @@
 				<div class="form-group col-xs-6 col-xs-6 .col-md-4">
 					<label for="input_search" class="col-sm-2 control-label">search</label>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" id="input_search" placeholder="Password">
+						<input type="text" class="form-control" id="input_search" placeholder="Search">
 					</div>
 				</div>
 				<div class="form-group col-xs-6">
-					<label for="input_search" class="col-sm-2 control-label">group</label>
+					<label for="input_group" class="col-sm-2 control-label">group</label>
 					<div class="col-sm-8">
-						 <!-- <select class="form-control">
-							<option>-----select----</option>
+						<select class="form-control" id="input_group" disabled>
 							<?php
 							foreach ($show_group as $group => $group_value) {
-							# code...					
-								echo '<option value="'.$group_value->group_id.'">'.$group_value->group_name.'</option>';
-							}
-							?>
-						</select> -->
-						<?php 
-							foreach ($show_group as $key => $group_value) {
-								# code...
-								if($group_value->group_name == $page){
-									echo '<input type="text" class="form-control" id="input_group" value="'.$group_value->group_name.'" disabled>';
+							# code...	select group ....
+								if($group_value->group_name == $page){				
+									echo '<option value="'.$group_value->group_id.'">'.$group_value->group_name.'</option>';
 								}
 							}
-						?>
-						<!-- <input type="text" class="form-control" id="input_group" value="<?php echo $page;?>" disabled> -->
+							?>
+						</select> 
+
 					</div>
 				</div>
 				<div class="form-group col-xs-6">
-					<label for="input_search" class="col-sm-2 control-label">detail	</label>
+					<label for="input_detail" class="col-sm-2 control-label">detail	</label>
 					<div class="col-sm-8">
-						<textarea class="form-control" rows="3"></textarea>
+						<textarea class="form-control" rows="3" id="input_detail"></textarea>
 					</div>
 				</div>
 				<div class="form-group col-xs-6">
-					<label for="input_search" class="col-sm-2 control-label">picture	</label>
+					<label for="input_picture" class="col-sm-2 control-label">picture	</label>
 					<div class="col-sm-8">
-						<input type="file" class="form-control" id="input_search">
+						<input type="file" class="form-control" id="input_picture">
 					</div>
 				</div>
 
