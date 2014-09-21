@@ -48,9 +48,14 @@
 					<div class="col-sm-8">
 						<select class="form-control" id="input_group" name="input_group" readonly>
 							<?php
+							$show_group_detail ;
+
 							foreach ($show_group as $group => $group_value) {
 							# code...	select group ....
-								if($group_value->group_name == $page){				
+								
+								if($group_value->group_name == $page){		
+								$show_group_detail = $group_value->group_id; #ประกาศให้ใช้ร่วมกัน
+
 									echo '<option value="'.$group_value->group_id.'">'.$group_value->group_name.'</option>';
 								}
 							}
@@ -58,6 +63,7 @@
 						</select>
 					</div>
 				</div>
+				<?php echo "group_id = ".$show_group_detail;?>
 				<div class="form-group col-xs-6">
 					<label for="input_detail" class="col-sm-2 control-label">detail	</label>
 					<div class="col-sm-8">
@@ -73,8 +79,8 @@
 				</div>
 
 				<div class="col-sm-offset-8  col-xs-4">
-					<button type="reset" class="btn btn-default">reset</button>
-					<button type="submit" class="btn btn-default">save</button>
+					<button type="reset" class="btn btn-default" value="reset">reset</button>
+					<button type="submit" class="btn btn-default" value="save">save</button>
 				</div>
 			</div>
 		</form>
@@ -83,9 +89,9 @@
 			<thead>
 				<tr>
 					<th>#</th>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Username</th>
+					<th>คำอธิบาย</th>
+					<th>ภาพ</th>
+					<th>group</th>
 					<th>edit delete</th>
 				</tr>
 			</thead>

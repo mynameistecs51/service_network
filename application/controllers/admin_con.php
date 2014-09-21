@@ -30,5 +30,7 @@ class Admin_con extends CI_Controller{
 			redirect('/admin_con/edit_admin/'.$value->group_name,'refresh');
 		}
 	}
+
+
 }
 ?>
