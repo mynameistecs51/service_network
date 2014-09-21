@@ -12,10 +12,21 @@ class Admin_con extends CI_Controller{
 	}
 
 	public function edit_admin($page){
+		// show service for group
+		$query_service_by_group = $this->db->query(
+			"SELECT detail.detail_id, detail.detail_text, detail.pic_name , service_group.group_name
+			FROM detail
+			INNER JOIN service_group
+			ON detail.group_id = service_group.group_id
+			WHERE group_name ='$page'
+			ORDER BY detail_id DESC ;"
+			)->result();
+
 		$data = array(
 			'title' => "edit_".$page,
 			'page'=> $page,
 			'show_group' => $this->service_m->show_group(),
+			'query_service_by_group' => $query_service_by_group,
 			);
 		$this->load->view('admin/edit_admin',$data);
 	}
@@ -30,7 +41,6 @@ class Admin_con extends CI_Controller{
 			redirect('/admin_con/edit_admin/'.$value->group_name,'refresh');
 		}
 	}
-
 
 }
 ?>
