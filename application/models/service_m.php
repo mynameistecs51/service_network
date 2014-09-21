@@ -16,11 +16,11 @@ class Service_m extends CI_model {
 		$input_detail = $this->input->post('input_detail');
 		$input_group = $this->input->post('input_group');
 		///
-		$config['upload_path'] = './image/pict_sele/';
+		$config['upload_path'] = './image/pic_sale/';
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '6144';
 		//$config['encrypt_name'] = TRUE;
-		$rand = rand(0001,9999);
+		$rand = rand(1111,9999);
 		$date= date("Y_m_d");
 		$config['file_name']  = $date.$rand;
 		//$config['max_width']  = '1024';

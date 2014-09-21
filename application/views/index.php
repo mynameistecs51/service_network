@@ -31,13 +31,13 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img  class="slide-image" src="<?php echo base_url().'image/pic_sele/network_admin.jpg';?>"  style="width:850px; height:300px;" alt="">
+                            <img  class="slide-image" src="<?php echo base_url().'image/pic_sale/network_admin.jpg';?>"  style="width:850px; height:300px;" alt="">
                         </div>
                         <div class="item">
-                            <img class="slide-image" src="<?php echo base_url().'image/pic_sele/network1.jpg';?>"  style="width:850px; height:300px;" alt="">
+                            <img class="slide-image" src="<?php echo base_url().'image/pic_sale/network1.jpg';?>"  style="width:850px; height:300px;" alt="">
                         </div>
                         <div class="item">
-                            <img class="slide-image" src="<?php echo base_url().'image/pic_sele/cctv.jpg';?>"  style="width:850px; height:300px;" alt="">
+                            <img class="slide-image" src="<?php echo base_url().'image/pic_sale/cctv.jpg';?>"  style="width:850px; height:300px;" alt="">
                         </div>
                         <div class="item">
                             <img class="slide-image" src="http://placehold.it/800x300" alt=""  style="width:850px; height:300px;">
@@ -58,7 +58,7 @@
 
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail">
-                    <img src="<?php echo base_url().'image/pic_sele/network_admin.jpg';?>" alt="" style="width:320px; height:150px;">
+                    <img src="<?php echo base_url().'image/pic_sale/network_admin.jpg';?>" alt="" style="width:320px; height:150px;">
                     <div class="caption">
                         <h4 class="pull-right">xxxB.-</h4>
                         <h4><a href="#">NetWork Admin</a>
@@ -80,7 +80,7 @@
 
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail">
-                    <img src="<?php echo base_url().'image/pic_sele/network1.jpg';?>" alt="" style="width:320px; height:150px;">
+                    <img src="<?php echo base_url().'image/pic_sale/network1.jpg';?>" alt="" style="width:320px; height:150px;">
                     <div class="caption">
                         <h4 class="pull-right">xxxB.-</h4>
                         <h4><a href="#">Network</a>
@@ -102,7 +102,7 @@
 
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail">
-                    <img src="<?php echo base_url().'image/pic_sele/cctv.jpg';?>" alt="" style="width:320px; height:150px;">
+                    <img src="<?php echo base_url().'image/pic_sale/cctv.jpg';?>" alt="" style="width:320px; height:150px;">
                     <div class="caption">
                         <h4 class="pull-right">xxxB.-</h4>
                         <h4><a href="#">CCTV</a>

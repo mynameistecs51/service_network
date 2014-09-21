@@ -24,7 +24,7 @@
 
 			<div class="col-sm-4 col-lg-4 col-md-4">
 				<div class="thumbnail">
-					<img src="<?php echo base_url().'image/pic_sele/network_admin.jpg';?>" alt="" style="width:320px; height:150px;">
+					<img src="<?php echo base_url().'image/pic_sale/network_admin.jpg';?>" alt="" style="width:320px; height:150px;">
 					<div class="caption">
 						<h4 class="pull-right">xxxB.-</h4>
 						<h4><a href="#">NetWork Admin</a>
@@ -46,7 +46,7 @@
 
 			<div class="col-sm-4 col-lg-4 col-md-4">
 				<div class="thumbnail">
-					<img src="<?php echo base_url().'image/pic_sele/network1.jpg';?>" alt="" style="width:320px; height:150px;">
+					<img src="<?php echo base_url().'image/pic_sale/network1.jpg';?>" alt="" style="width:320px; height:150px;">
 					<div class="caption">
 						<h4 class="pull-right">xxxB.-</h4>
 						<h4><a href="#">Network</a>
@@ -68,7 +68,7 @@
 
 			<div class="col-sm-4 col-lg-4 col-md-4">
 				<div class="thumbnail">
-					<img src="<?php echo base_url().'image/pic_sele/cctv.jpg';?>" alt="" style="width:320px; height:150px;">
+					<img src="<?php echo base_url().'image/pic_sale/cctv.jpg';?>" alt="" style="width:320px; height:150px;">
 					<div class="caption">
 						<h4 class="pull-right">xxxB.-</h4>
 						<h4><a href="#">CCTV</a>
