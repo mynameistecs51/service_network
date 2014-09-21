@@ -22,7 +22,13 @@ class Admin_con extends CI_Controller{
 
 	function add_detail(){
 		$this->service_m->add_detail_db();
-		//$this->load->view('/admin/admin_con',$data);
+
+		$sql = $this->db->query("SELECT group_name FROM service_group WHERE group_id ='".$input_group = $this->input->post('input_group')."'"); ## query group_name by input_group id
+
+		foreach ($sql->result() as $key => $value) {
+			# redirect edit_admin/last_page
+			redirect('/admin_con/edit_admin/'.$value->group_name,'refresh');
+		}
 	}
 }
 ?>

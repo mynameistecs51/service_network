@@ -34,6 +34,9 @@ class Service_m extends CI_model {
 			// redirect('ctl_main/page_teacher/',$data);
 		}
 
+		$input_detail = $this->input->post('input_detail');
+		$input_group = $this->input->post('input_group');
+
 		///
 		$insert = array(
 			'detail_id' => "",
@@ -41,9 +44,8 @@ class Service_m extends CI_model {
 			'pic_name' => $config['file_name'],
 			'group_id' => $input_group,
 			);
-		print_r($insert);
-		//$query =  $this->db->insert('teacher',$insert);
-		//return true;
+		//$query =  $this->db->insert('detail',$insert);
+		return true;
 	}
 }
 ?>
