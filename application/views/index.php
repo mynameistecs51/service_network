@@ -55,16 +55,15 @@
         </div>
 
         <div class="row">
-            <?php
-                foreach ($show_detail as $key => $value_detail) {
-                    # code...
-                    echo "รายละเอียด....".$value_detail->detail_text.'<br/>';
-                }
-
-            ?>
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail">
-                    <img src="<?php echo base_url().'image/pic_sale/network_admin.jpg';?>" alt="" style="width:320px; height:150px;">
+                    <?php
+                    foreach ($show_detail as $key => $value_detail) {
+                    // code...show picture
+                        echo "<img src=".base_url()."image/pic_sale/".$value_detail->pic_name.".jpg style='width:320px; height:150px;>";
+                    }//ตอนนี้ยังไม่โชว์รายละเยีอด
+                    ?>
+                    
                     <div class="caption">
                         <h4 class="pull-right">xxxB.-</h4>
                         <h4><a href="#">NetWork Admin</a>

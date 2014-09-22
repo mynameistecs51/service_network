@@ -29,10 +29,20 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `detail` (
   `detail_id` int(11) NOT NULL AUTO_INCREMENT,
   `detail_text` text NOT NULL,
-  `pic_name` int(11) NOT NULL,
+  `pic_name` varchar(100) NOT NULL,
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`detail_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- dump ตาราง `detail`
+--
+
+INSERT INTO `detail` (`detail_id`, `detail_text`, `pic_name`, `group_id`) VALUES
+(2, 'รับติดตั้งระบบ network_admin', '2014_09_229981', 1),
+(3, 'รับติดตั้งระบบ Network', '2014_09_225445', 1),
+(4, 'รับติดตั้งระบบ Network', '2014_09_229145', 2),
+(5, 'รับติดตั้งระบบกล้องวงจรปิด', '2014_09_223455', 3);
 
 -- --------------------------------------------------------
 
