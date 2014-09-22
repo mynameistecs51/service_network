@@ -16,7 +16,7 @@ class Service_m extends CI_model {
 		$input_detail = $this->input->post('input_detail');
 		$input_group = $this->input->post('input_group');
 		///
-	 	$config['upload_path'] = './image/';
+	 	$config['upload_path'] = './image/pic_sale/';
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '6144';
 		//$config['encrypt_name'] = TRUE;
@@ -51,8 +51,15 @@ class Service_m extends CI_model {
 
 	function get_detail(){
 		///
-		$query_detail = $this->db->get('detail');
-		return $query->result();
+		// $query_detail = $this->db->get('detail');
+		$query_detail = $this->db->query(
+			"SELECT detail.detail_id, detail.detail_text, detail.pic_name , service_group.group_name
+			FROM detail
+			INNER JOIN service_group
+			ON detail.group_id = service_group.group_id
+			ORDER BY detail_id DESC "
+			);
+		return $query_detail->result();
 	}
 }
 ?>

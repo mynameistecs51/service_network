@@ -55,7 +55,13 @@
         </div>
 
         <div class="row">
+            <?php
+                foreach ($show_detail as $key => $value_detail) {
+                    # code...
+                    echo "รายละเอียด....".$value_detail->detail_text.'<br/>';
+                }
 
+            ?>
             <div class="col-sm-4 col-lg-4 col-md-4">
                 <div class="thumbnail">
                     <img src="<?php echo base_url().'image/pic_sale/network_admin.jpg';?>" alt="" style="width:320px; height:150px;">

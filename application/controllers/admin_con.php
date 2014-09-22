@@ -7,8 +7,13 @@ class Admin_con extends CI_Controller{
 	}
 
 	public function index(){
-		$data['title'] = "configuration";
+
+		$data = array(
+			'title' => "configuration",
+			);
+		
 		$this->load->view('/admin/admin',$data);
+
 	}
 
 	public function edit_admin($page){

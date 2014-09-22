@@ -12,6 +12,8 @@ class Service_con extends CI_Controller {
 		
 		$data = array(
 			'title' => "Network Service & Solution",
+
+			'show_detail' => $this->service_m->get_detail(),
 			);
 
 		$this->load->view('index',$data);

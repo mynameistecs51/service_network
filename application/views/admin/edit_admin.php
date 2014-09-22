@@ -8,7 +8,7 @@
 
 		var oFReader = new FileReader();
 
-		oFReader.readAsDataURL(document.getElementById("input_picture").files[0]);
+		oFReader.readAsDataURL(document.getElementById("userfile").files[0]);
 
 		oFReader.onload = function (oFREvent) {
 
@@ -74,18 +74,11 @@
 						<label for="input_picture" class="col-sm-2 control-label">picture	</label>
 						<div class="col-sm-8">
 							<img id="show_pic" src="<?php echo base_url().'image/pic_admin/no-image.jpg';?>" style="width:130px; height:70px" /><br/>
-							<input id="input_picture" class="form-control" type="file" name="input_picture" size="20" onchange="PreviewImage();" multiple/>
+							<input type="file" id="userfile" class="form-control" name="userfile" size="20" onchange="PreviewImage();" multiple/>
 						</div>
 					</div>
 
 					<div class="col-sm-offset-8  col-xs-4">
-					<?php 
-						if($error=null){
-							echo "";
-						}else{
-							echo "error--->".$error;
-						}
-					?>
 						<button type="reset" class="btn btn-default" value="reset">reset</button>
 						<button type="submit" class="btn btn-default" value="save">save</button>
 					</div>
@@ -94,9 +87,9 @@
 			<hr>
 			<table class="table table-hover">
 				<thead>
-					<tr>
+					<tr >
 						<th>#</th>
-						<th>คำอธิบาย</th>
+						<th   style="text-align:center;" >คำอธิบาย</th>
 						<th>ภาพ</th>
 						<th>group</th>
 						<th>edit delete</th>
@@ -105,15 +98,15 @@
 				<tbody>
 					<?php
 					foreach ($query_service_by_group as $key => $service_group_value) {
-						echo "<tr>";
+						echo "<tr >";
 						echo "<td>";
 						echo "#";
 						echo "</td>";
-						echo "<td>";
+						echo "<td width=400px>";
 								echo $service_group_value->detail_text;		//โชว์ รายละเอียด
 								echo "</td>";
 								echo "<td>";	
-								echo $service_group_value->pic_name;			///โชว์รูปภาพ
+								echo "<img src=".base_url()."image/pic_sale/".$service_group_value->pic_name.".jpg width=100px height=70px>";			///โชว์รูปภาพ
 								echo "</td>";
 								echo "<td>";
 								echo $service_group_value->group_name;		//โชว์กลุ่ม
