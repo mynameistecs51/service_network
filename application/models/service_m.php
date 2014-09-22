@@ -16,7 +16,7 @@ class Service_m extends CI_model {
 		$input_detail = $this->input->post('input_detail');
 		$input_group = $this->input->post('input_group');
 		///
-		$config['upload_path'] = './image/pic_sale/';
+	 	$config['upload_path'] = './image/';
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '6144';
 		//$config['encrypt_name'] = TRUE;
@@ -27,9 +27,11 @@ class Service_m extends CI_model {
 		//$config['max_height']  = '768';
 
 		$this->load->library('upload', $config);
-		if ( ! $this->upload->do_upload()){
+		if ( !$this->upload->do_upload()){
 			$error = array('error' => $this->upload->display_errors());
 			$this->load->view('admin/edit_admin', $error);
+			//redirect('admin_con/edit_admin/error','refresh');
+
 		}else{
 			$data = array('upload_data' => $this->upload->data());
 			//$this->model_main->create_teacher();  //create data file for database

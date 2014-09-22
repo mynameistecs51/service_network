@@ -74,11 +74,18 @@
 						<label for="input_picture" class="col-sm-2 control-label">picture	</label>
 						<div class="col-sm-8">
 							<img id="show_pic" src="<?php echo base_url().'image/pic_admin/no-image.jpg';?>" style="width:130px; height:70px" /><br/>
-							<input id="input_picture" class="form-control" type="file" name="input_picture" onchange="PreviewImage();" multiple/>
+							<input id="input_picture" class="form-control" type="file" name="input_picture" size="20" onchange="PreviewImage();" multiple/>
 						</div>
 					</div>
 
 					<div class="col-sm-offset-8  col-xs-4">
+					<?php 
+						if($error=null){
+							echo "";
+						}else{
+							echo "error--->".$error;
+						}
+					?>
 						<button type="reset" class="btn btn-default" value="reset">reset</button>
 						<button type="submit" class="btn btn-default" value="save">save</button>
 					</div>
