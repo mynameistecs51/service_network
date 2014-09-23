@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.12
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 
--- Server version: 5.5.36
--- PHP Version: 5.4.27
+-- Generation Time: Sep 23, 2014 at 04:55 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- โครงสร้างตาราง `detail`
+-- Table structure for table `detail`
 --
 
 CREATE TABLE IF NOT EXISTS `detail` (
@@ -32,22 +32,23 @@ CREATE TABLE IF NOT EXISTS `detail` (
   `pic_name` varchar(100) NOT NULL,
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`detail_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
 
 --
--- dump ตาราง `detail`
+-- Dumping data for table `detail`
 --
 
 INSERT INTO `detail` (`detail_id`, `detail_text`, `pic_name`, `group_id`) VALUES
-(2, 'รับติดตั้งระบบ network_admin', '2014_09_229981', 1),
-(3, 'รับติดตั้งระบบ Network', '2014_09_225445', 1),
-(4, 'รับติดตั้งระบบ Network', '2014_09_229145', 2),
-(5, 'รับติดตั้งระบบกล้องวงจรปิด', '2014_09_223455', 3);
+(33, 'รับติดตั้ง ระบบเครื่องข่ายแอ๊ดมิน', '2014_09_222760', 1),
+(34, 'รับติดตั้งระบบเครื่อข่าย สายแลน และไร้สาย', '2014_09_223013', 2),
+(35, 'รับติดตั่งระบบกล้องวงจรปิด ระบบโทรศัพท์ภายใจ ลำโพงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงงง', '2014_09_228795', 3),
+(37, 'network_admin', '2014_09_225998', 1),
+(38, 'ขายจักรยาน', '2014_09_231830', 4);
 
 -- --------------------------------------------------------
 
 --
--- โครงสร้างตาราง `service_group`
+-- Table structure for table `service_group`
 --
 
 CREATE TABLE IF NOT EXISTS `service_group` (
@@ -57,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `service_group` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- dump ตาราง `service_group`
+-- Dumping data for table `service_group`
 --
 
 INSERT INTO `service_group` (`group_id`, `group_name`) VALUES
