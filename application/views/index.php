@@ -12,7 +12,7 @@
                     <?php echo anchor('service_con/show_detail/network/',"Network",'class="list-group-item"');?>
                     <?php echo anchor('service_con/show_detail/cctv/',"CCTV",'class="list-group-item"');?>
                     <?php echo anchor('service_con/show_detail/profile_ago/',"ผลงานที่ผ่านมา",'class="list-group-item"');?>
-                    
+
                 </div>
             </div>
         </div>
@@ -31,153 +31,151 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img  class="slide-image" src="<?php echo base_url().'image/pic_sale/network_admin.jpg';?>"  style="width:850px; height:300px;" alt="">
-                        </div>
-                        <div class="item">
-                            <img class="slide-image" src="<?php echo base_url().'image/pic_sale/network1.jpg';?>"  style="width:850px; height:300px;" alt="">
-                        </div>
-                        <div class="item">
-                            <img class="slide-image" src="<?php echo base_url().'image/pic_sale/cctv.jpg';?>"  style="width:850px; height:300px;" alt="">
-                        </div>
-                        <div class="item">
                             <img class="slide-image" src="http://placehold.it/800x300" alt=""  style="width:850px; height:300px;">
                         </div>
-                    </div>
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
+                        <?php
+                        foreach ($show_detail as $key => $value_detail){
+                            echo "<div class='item'>";
+// code...show picture
+                            echo "<img class='slide-image' src=".base_url()."image/pic_sale/".$value_detail->pic_name.".jpg style='width:850px; height:300px;'>";                            
+                            echo "</div>";
+}//ตอนนี้ยังไม่โชว์รายละเยีอด
+?>
+
+</div>
+
+<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+</div>
+</div>
+
+</div>
+
+<div class="row">
+    <?php 
+    foreach ($show_detail as $key => $value_detail){
+        ?>
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="<?php echo base_url().'image/pic_sale/'.$value_detail->pic_name.'.jpg';?>" alt="" style="width:320px; height:150px;">
+                <div class="caption">
+                    <h4 class="pull-right">xxxB.-</h4>
+                    <h4><a href="#"><?php echo $value_detail->group_name;?></a>
+                    </h4>
+                    <p><?php echo $value_detail->detail_text;?></p>
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">12 reviews</p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </p>
                 </div>
             </div>
-
+        </div>
+        <?php } ?>
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="<?php echo base_url().'image/pic_sale/network1.jpg';?>" alt="" style="width:320px; height:150px;">
+                <div class="caption">
+                    <h4 class="pull-right">xxxB.-</h4>
+                    <h4><a href="#">Network</a>
+                    </h4>
+                    <p>ติดต่อหลังไมค์</p>
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">12 reviews</p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-                    <?php
-                    foreach ($show_detail as $key => $value_detail) {
-                    // code...show picture
-                        echo "<img src=".base_url()."image/pic_sale/".$value_detail->pic_name.".jpg style='width:320px; height:150px;>";
-                    }//ตอนนี้ยังไม่โชว์รายละเยีอด
-                    ?>
-                    
-                    <div class="caption">
-                        <h4 class="pull-right">xxxB.-</h4>
-                        <h4><a href="#">NetWork Admin</a>
-                        </h4>
-                        <p>ติดต่อหลังไมค์ <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">15 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                        </p>
-                    </div>
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="<?php echo base_url().'image/pic_sale/cctv.jpg';?>" alt="" style="width:320px; height:150px;">
+                <div class="caption">
+                    <h4 class="pull-right">xxxB.-</h4>
+                    <h4><a href="#">CCTV</a>
+                    </h4>
+                    <p>ติดต่อหลังไมค์</p>
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">31 reviews</p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </p>
                 </div>
             </div>
+        </div>
 
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-                    <img src="<?php echo base_url().'image/pic_sale/network1.jpg';?>" alt="" style="width:320px; height:150px;">
-                    <div class="caption">
-                        <h4 class="pull-right">xxxB.-</h4>
-                        <h4><a href="#">Network</a>
-                        </h4>
-                        <p>ติดต่อหลังไมค์</p>
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">12 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                        </p>
-                    </div>
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="http://placehold.it/320x150" alt="">
+                <div class="caption">
+                    <h4 class="pull-right">xxxB.-</h4>
+                    <h4><a href="#">Fourth Product</a>
+                    </h4>
+                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">6 reviews</p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </p>
                 </div>
             </div>
+        </div>
 
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-                    <img src="<?php echo base_url().'image/pic_sale/cctv.jpg';?>" alt="" style="width:320px; height:150px;">
-                    <div class="caption">
-                        <h4 class="pull-right">xxxB.-</h4>
-                        <h4><a href="#">CCTV</a>
-                        </h4>
-                        <p>ติดต่อหลังไมค์</p>
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">31 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                        </p>
-                    </div>
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="http://placehold.it/320x150" alt="">
+                <div class="caption">
+                    <h4 class="pull-right">xxxB.-</h4>
+                    <h4><a href="#">Fifth Product</a>
+                    </h4>
+                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
+                <div class="ratings">
+                    <p class="pull-right">18 reviews</p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </p>
+                </div>                                      
             </div>
+        </div>
 
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/320x150" alt="">
-                    <div class="caption">
-                        <h4 class="pull-right">xxxB.-</h4>
-                        <h4><a href="#">Fourth Product</a>
-                        </h4>
-                        <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">6 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/320x150" alt="">
-                    <div class="caption">
-                        <h4 class="pull-right">xxxB.-</h4>
-                        <h4><a href="#">Fifth Product</a>
-                        </h4>
-                        <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                    <div class="ratings">
-                        <p class="pull-right">18 reviews</p>
-                        <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                        </p>
-                    </div>                                      
-                </div>
-            </div>
-
-            <div class="col-sm-4 col-lg-4 col-md-4">
-                <h4><a href="#">Like this template?</a>
-                </h4>
-                <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-                <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
-            </div>
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <h4><a href="#">ยังมีที่ว่างสำหรับคุณ</a>
+            </h4>
+            <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
+            <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">ติดต่อเรา</a>
         </div>
     </div>
+</div>
 </div>
 <?php $this->load->view('footter');?>
