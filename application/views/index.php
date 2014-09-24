@@ -50,57 +50,57 @@
 // code...show picture
                             echo "<img class='slide-image' src=".base_url()."image/pic_sale/".$value_detail->pic_name.".jpg style='width:850px; height:300px;'>";                            
                             echo "</div>";
-}//ตอนนี้ยังไม่โชว์รายละเยีอด
-?>
+                        }//ตอนนี้ยังไม่โชว์รายละเยีอด
+                        ?>
 
-</div>
+                        </div>
 
-<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-</a>
-<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-</a>
-</div>
-</div>
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                     </div>
+                 </div>
 
-</div>
+             </div>
 
-<div class="row">
-    <?php 
-    foreach ($show_detail as $key => $value_detail){
-        ?>
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail">
-                <img src="<?php echo base_url().'image/pic_sale/'.$value_detail->pic_name.'.jpg';?>" alt="" style="width:320px; height:150px;">
-                <div class="caption">
-                    <h4 class="pull-right">xxxB.-</h4>
-                    <h4><a href="#"><?php echo $value_detail->group_name;?></a>
-                    </h4>
-                    <p><?php echo $value_detail->detail_text;?></p>
+        <div class="row">
+            <?php 
+            foreach ($show_detail as $key => $value_detail){
+                ?>
+                <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail">
+                        <img src="<?php echo base_url().'image/pic_sale/'.$value_detail->pic_name.'.jpg';?>" alt="" style="width:320px; height:150px;">
+                        <div class="caption">
+                            <h4 class="pull-right">xxxB.-</h4>
+                            <h4><a href="#"><?php echo $value_detail->group_name;?></a>
+                            </h4>
+                            <p><?php echo $value_detail->detail_text;?></p>
+                        </div>
+                        <div class="ratings">
+                            <p class="pull-right">12 reviews</p>
+                            <p>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="ratings">
-                    <p class="pull-right">12 reviews</p>
-                    <p>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <?php 
+                <?php 
             } 
-        ?>
-        <div class="col-sm-4 col-lg-4 col-md-4">
+            ?>
+            <div class="col-sm-4 col-lg-4 col-md-4">
                 <h4><a href="#">ยังมีที่ว่างสำหรับคุณ</a>
                 </h4>
                 <p>ถ้าหากคุณคิดว่าจะติดตั้งระบบเครือข่ายไม่ว่าจะเป็น กล้องวงจรปิด ระบบอินเเตอร์เน็ต หอพัก บ้าน อาคารสำนักงาน<a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
                 <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">ติดต่อเรา</a>
+            </div>
         </div>
-    </div>
-</div>
+    /div>
 </div>
 <?php $this->load->view('footter');?>
