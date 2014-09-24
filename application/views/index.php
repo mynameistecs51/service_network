@@ -80,100 +80,14 @@
                 </div>
             </div>
         </div>
-        <?php } ?>
+        <?php 
+            } 
+        ?>
         <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail">
-                <img src="<?php echo base_url().'image/pic_sale/network1.jpg';?>" alt="" style="width:320px; height:150px;">
-                <div class="caption">
-                    <h4 class="pull-right">xxxB.-</h4>
-                    <h4><a href="#">Network</a>
-                    </h4>
-                    <p>ติดต่อหลังไมค์</p>
-                </div>
-                <div class="ratings">
-                    <p class="pull-right">12 reviews</p>
-                    <p>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail">
-                <img src="<?php echo base_url().'image/pic_sale/cctv.jpg';?>" alt="" style="width:320px; height:150px;">
-                <div class="caption">
-                    <h4 class="pull-right">xxxB.-</h4>
-                    <h4><a href="#">CCTV</a>
-                    </h4>
-                    <p>ติดต่อหลังไมค์</p>
-                </div>
-                <div class="ratings">
-                    <p class="pull-right">31 reviews</p>
-                    <p>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail">
-                <img src="http://placehold.it/320x150" alt="">
-                <div class="caption">
-                    <h4 class="pull-right">xxxB.-</h4>
-                    <h4><a href="#">Fourth Product</a>
-                    </h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="ratings">
-                    <p class="pull-right">6 reviews</p>
-                    <p>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail">
-                <img src="http://placehold.it/320x150" alt="">
-                <div class="caption">
-                    <h4 class="pull-right">xxxB.-</h4>
-                    <h4><a href="#">Fifth Product</a>
-                    </h4>
-                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="ratings">
-                    <p class="pull-right">18 reviews</p>
-                    <p>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                    </p>
-                </div>                                      
-            </div>
-        </div>
-
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <h4><a href="#">ยังมีที่ว่างสำหรับคุณ</a>
-            </h4>
-            <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
-            <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">ติดต่อเรา</a>
+                <h4><a href="#">ยังมีที่ว่างสำหรับคุณ</a>
+                </h4>
+                <p>ถ้าหากคุณคิดว่าจะติดตั้งระบบเครือข่ายไม่ว่าจะเป็น กล้องวงจรปิด ระบบอินเเตอร์เน็ต หอพัก บ้าน อาคารสำนักงาน<a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
+                <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">ติดต่อเรา</a>
         </div>
     </div>
 </div>
