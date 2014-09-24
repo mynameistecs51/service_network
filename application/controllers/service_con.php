@@ -37,6 +37,14 @@ class Service_con extends CI_Controller {
 		$this->load->view('show_detail',$data);
 	}
 
+	public function contact($page){
+		$data = array(
+			'title' => $page,
+		);
+		$this->load->view('contact',$data);
+
+	}
+
 }
 
 /* End of file welcome.php */

@@ -12,6 +12,7 @@
                     <?php echo anchor('service_con/show_detail/network/',"Network",'class="list-group-item"');?>
                     <?php echo anchor('service_con/show_detail/cctv/',"CCTV",'class="list-group-item"');?>
                     <?php echo anchor('service_con/show_detail/profile_ago/',"ผลงานที่ผ่านมา",'class="list-group-item"');?>
+                    <?php echo anchor('service_con/contact/Contact',"ติดต่อเรา",'class="list-group-item"');?>
                 </div>
             </div>
         </div>
