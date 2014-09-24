@@ -12,7 +12,18 @@
                     <?php echo anchor('service_con/show_detail/network/',"Network",'class="list-group-item"');?>
                     <?php echo anchor('service_con/show_detail/cctv/',"CCTV",'class="list-group-item"');?>
                     <?php echo anchor('service_con/show_detail/profile_ago/',"ผลงานที่ผ่านมา",'class="list-group-item"');?>
-
+                </div>
+            </div>
+        </div>
+        <div class="navbar-default sidbar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <p class="lead">สิ่งที่น่าสนใจ</p>
+                <div class="list-group">
+                    <!-- <a href="index.php/admin_con" class="list-group-item">admin</a> -->
+                    <?php echo anchor('#',"Cico",'class="list-group-item"');?>
+                    <?php echo anchor('#',"อื่น ๆ",'class="list-group-item"');?>
+                    <?php echo anchor('#',"อื่น ๆ ",'class="list-group-item"');?>
+                    <?php echo anchor('#',"อื่น ๆ",'class="list-group-item"');?>
                 </div>
             </div>
         </div>
