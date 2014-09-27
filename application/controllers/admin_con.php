@@ -49,8 +49,9 @@ class Admin_con extends CI_Controller{
 
 
 	//delete file picture
-	function delete_file($page,$detail_id){
+	function delete_file($page,$detail_id,$file_pict){
 		$this->service_m->delete_file($detail_id);
+		//delete_files('echo base_url()/image/pic_sale/', TRUE);----------------- ลบไฟล์ภาพ
 		redirect('admin_con/edit_admin/'.$page,'refresh');
 	}
 

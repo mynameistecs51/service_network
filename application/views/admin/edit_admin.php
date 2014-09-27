@@ -113,7 +113,7 @@
 								echo "</td>";
 								echo "<td>";
 								echo anchor('admin_con/edit_file/'.$service_group_value->detail_id,'แก้ไข  ','&nbsp;&nbsp;');
-								echo anchor('admin_con/delete_file/'.$page.'/'.$service_group_value->detail_id,'ลบ	');
+								echo anchor('admin_con/delete_file/'.$page.'/'.$service_group_value->detail_id.'/'.$service_group_value->pic_name,'ลบ	');
 								echo "</td>";
 								echo "</tr>";
 							}
