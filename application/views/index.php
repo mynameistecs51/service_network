@@ -102,6 +102,6 @@
                 <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">ติดต่อเรา</a>
             </div>
         </div>
-    /div>
-</div>
+    </div>
+</div><hr/>
 <?php $this->load->view('footter');?>

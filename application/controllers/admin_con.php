@@ -47,5 +47,26 @@ class Admin_con extends CI_Controller{
 		}
 	}
 
+
+	//delete file picture
+	function delete_file($page,$detail_id){
+		$this->service_m->delete_file($detail_id);
+		redirect('admin_con/edit_admin/'.$page,'refresh');
+	}
+
+	function edit_file($detail_id){
+		$query_detail = $this->service_m->edit_file($detail_id);
+	 	//$query_detail = $this->db->query("SELECT * FROM detail WHERE detail_id=".$detail_id)->result();
+		$data;
+		foreach ($query_detail as $key => $row) {
+			# code...
+			$data = array(
+					'detail_id' => $row->detail_id,
+					'detail_text' => $row->detail_text,
+					'detail_picname' => $rows->detail_picname,
+			);
+			$this->load->view(	);
+		}
+	}
 }
 ?>
