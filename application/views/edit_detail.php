@@ -1,4 +1,5 @@
 <?php $this->load->view('head');?>
+<?php $this->load->view('head');?>
 <!-- โชว์รูปภาพก่อนอัพ -->
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,9 +29,9 @@
 		</div>	<!-- ---------------- end div class="panel-heading"---------------------- -->
 		<div class="panel-body">
 			<ul class="nav nav-tabs" role="tablist">
-				<li class="active"><?php echo anchor('admin_con/edit_admin','เพิ่ม');?></li>
+				<li ><a href="#">เพิ่ม</a></li>
 				<li><a href="#">ลบ</a></li>
-				<li><?php echo anchor('admin_con/edit_file','แก้ไข');?></li>
+				<li class="active"><a href="#">แก้ไข</a></li>
 				<li><a href="#">ค้นหา</a></li>
 			</ul><br/>
 			
@@ -80,7 +81,7 @@
 
 					<div class="col-sm-offset-8  col-xs-4">
 						<button type="reset" class="btn btn-default" value="reset">reset</button>
-						<button type="submit" class="btn btn-default" value="save">update</button>
+						<button type="submit" class="btn btn-default" value="save">save</button>
 					</div>
 				</form>
 			</div>  <!-- --- end class="row col-md-offset-2" --------- -->
@@ -125,3 +126,5 @@
 		</div>
 	</div>
 	<?php $this->load->view('footter');?>
+
+<?php $this->load->view('footter');?>

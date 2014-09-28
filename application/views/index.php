@@ -49,7 +49,7 @@
                         foreach ($show_detail as $key => $value_detail){
                             echo "<div class='item'>";
                                 // code...show picture
-                            echo "<img class='slide-image' src=".base_url()."image/pic_sale/".$value_detail->pic_name.".jpg style='width:850px; height:300px;'>";                            
+                            echo "<img class='slide-image' src=".base_url()."image/pic_sale/".$value_detail->pic_name." style='width:850px; height:300px;'>";                            
                             echo "</div>";
                         }
                         ?>

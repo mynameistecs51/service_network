@@ -28,7 +28,7 @@
 		
 			<div class="col-sm-4 col-lg-4 col-md-4">
 				<div class="thumbnail">
-					<img src="<?php echo base_url().'image/pic_sale/'.$show_detail_by_group->pic_name.'.jpg';?>" alt="" style="width:320px; height:150px;">
+					<img src="<?php echo base_url().'image/pic_sale/'.$show_detail_by_group->pic_name;?>" alt="" style="width:320px; height:150px;">
 					<div class="caption">
 						<h4 class="pull-right">xxxB.-</h4>
 						<h4><a href="#"><?php echo $show_detail_by_group->group_name;?></a>
