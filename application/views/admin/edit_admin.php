@@ -80,7 +80,7 @@
 
 					<div class="col-sm-offset-8  col-xs-4">
 						<button type="reset" class="btn btn-default" value="reset">reset</button>
-						<button type="submit" class="btn btn-default" value="save">update</button>
+						<button type="submit" class="btn btn-default" value="save">save</button>
 					</div>
 				</form>
 			</div>  <!-- --- end class="row col-md-offset-2" --------- -->
@@ -112,7 +112,7 @@
 								echo $service_group_value->group_name;		//โชว์กลุ่ม
 								echo "</td>";
 								echo "<td>";
-								echo anchor('admin_con/edit_file/'.$service_group_value->detail_id,'แก้ไข  ','&nbsp;&nbsp;');
+								echo anchor('admin_con/edit_file/'.$page.'/'.$service_group_value->detail_id,'แก้ไข  ','&nbsp;&nbsp;');
 								echo anchor('admin_con/delete_file/'.$page.'/'.$service_group_value->detail_id.'/'.$service_group_value->pic_name,'ลบ	');
 								echo "</td>";
 								echo "</tr>";

@@ -57,8 +57,13 @@ class Admin_con extends CI_Controller{
 		redirect('admin_con/edit_admin/'.$page,'refresh');
 	}
 
-	function edit_file(){
-		$this->load->view('edit_detail');
+	function edit_file($page,$detail_id){
+		$data = array(
+				'title' => "update_".$page,
+				'page' => $page,
+				'detail_id' => $detail_id,
+			);
+		$this->load->view('edit_detail',$data);
 	}
 }
 ?>

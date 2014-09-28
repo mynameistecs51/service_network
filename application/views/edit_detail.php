@@ -29,7 +29,7 @@
 		</div>	<!-- ---------------- end div class="panel-heading"---------------------- -->
 		<div class="panel-body">
 			<ul class="nav nav-tabs" role="tablist">
-				<li ><a href="#">เพิ่ม</a></li>
+				<li ><?php echo anchor('admin_con/edit_admin/'.$page,'เพิ่ม');?></li>
 				<li><a href="#">ลบ</a></li>
 				<li class="active"><a href="#">แก้ไข</a></li>
 				<li><a href="#">ค้นหา</a></li>
@@ -81,7 +81,7 @@
 
 					<div class="col-sm-offset-8  col-xs-4">
 						<button type="reset" class="btn btn-default" value="reset">reset</button>
-						<button type="submit" class="btn btn-default" value="save">save</button>
+						<button type="submit" class="btn btn-default" value="save">update</button>
 					</div>
 				</form>
 			</div>  <!-- --- end class="row col-md-offset-2" --------- -->
@@ -113,7 +113,7 @@
 								echo $service_group_value->group_name;		//โชว์กลุ่ม
 								echo "</td>";
 								echo "<td>";
-								echo anchor('admin_con/edit_file/'.$service_group_value->detail_id,'แก้ไข  ','&nbsp;&nbsp;');
+								echo anchor('admin_con/edit_file/'.$page.'/'.$service_group_value->detail_id,'แก้ไข  ','&nbsp;&nbsp;');
 								echo anchor('admin_con/delete_file/'.$page.'/'.$service_group_value->detail_id.'/'.$service_group_value->pic_name,'ลบ	');
 								echo "</td>";
 								echo "</tr>";
