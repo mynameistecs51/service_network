@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 4.1.6
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 28, 2014 at 04:33 PM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Generation Time: 
+-- Server version: 5.5.36
+-- PHP Version: 5.4.25
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `detail`
+-- โครงสร้างตาราง `detail`
 --
 
 CREATE TABLE IF NOT EXISTS `detail` (
@@ -33,19 +33,19 @@ CREATE TABLE IF NOT EXISTS `detail` (
   `pic_type` varchar(50) NOT NULL,
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`detail_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=51 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=58 ;
 
 --
--- Dumping data for table `detail`
+-- dump ตาราง `detail`
 --
 
 INSERT INTO `detail` (`detail_id`, `detail_text`, `pic_name`, `pic_type`, `group_id`) VALUES
-(50, 'test', '2014_09_282865.jpg', 'image/jpeg', 1);
+(57, 'test', '2014_09_288503.jpg', 'image/jpeg', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `service_group`
+-- โครงสร้างตาราง `service_group`
 --
 
 CREATE TABLE IF NOT EXISTS `service_group` (
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `service_group` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `service_group`
+-- dump ตาราง `service_group`
 --
 
 INSERT INTO `service_group` (`group_id`, `group_name`) VALUES
