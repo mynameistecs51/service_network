@@ -45,13 +45,13 @@
                         <div class="item active">
                             <img class="slide-image" src="http://placehold.it/800x300" alt=""  style="width:850px; height:300px;">
                         </div>
-                        <?php
+                        <?php                        
                         foreach ($show_detail as $key => $value_detail){
                             echo "<div class='item'>";
-// code...show picture
+                                // code...show picture
                             echo "<img class='slide-image' src=".base_url()."image/pic_sale/".$value_detail->pic_name.".jpg style='width:850px; height:300px;'>";                            
                             echo "</div>";
-                        }//ตอนนี้ยังไม่โชว์รายละเยีอด
+                        }
                         ?>
 
                         </div>
@@ -73,7 +73,8 @@
                 ?>
                 <div class="col-sm-4 col-lg-4 col-md-4">
                     <div class="thumbnail">
-                        <img src="<?php echo base_url().'image/pic_sale/'.$value_detail->pic_name.'.jpg';?>" alt="" style="width:320px; height:150px;">
+
+                        <img src="<?php echo base_url().'image/pic_sale/'.$value_detail->pic_name;?>" alt="" style="width:320px; height:150px;">
                         <div class="caption">
                             <h4 class="pull-right">xxxB.-</h4>
                             <h4><a href="#"><?php echo $value_detail->group_name;?></a>

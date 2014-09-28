@@ -106,7 +106,7 @@
 								echo $service_group_value->detail_text;		//โชว์ รายละเอียด
 								echo "</td>";
 								echo "<td>";	
-								echo "<img src=".base_url()."image/pic_sale/".$service_group_value->pic_name.".jpg width=100px height=70px>";			///โชว์รูปภาพ
+								echo "<img src=".base_url()."image/pic_sale/".$service_group_value->pic_name." width=100px height=70px>";			///โชว์รูปภาพ
 								echo "</td>";
 								echo "<td>";
 								echo $service_group_value->group_name;		//โชว์กลุ่ม

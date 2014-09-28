@@ -49,10 +49,17 @@ class Admin_con extends CI_Controller{
 
 
 	//delete file picture
-	function delete_file($page,$detail_id,$file_pict){
-		$this->service_m->delete_file($detail_id);
+	function delete_file($page,$detail_id,$file_name){
+
+		$path_file = $_SERVER['DOCUMENT_ROOT'].'/service_network/image/';
+		chmod($path_file, 0755);
+		if(is_file($path_file.'pic_sale/'.$file_name)){
+			delete_files($path_file.'pic_sale/'.$file_name)or die('failed deleting: ' . $path_file.'pic_sale/'.$file_name);
+		}
+		//delete_files(base_url().'image/pic_sale/'.$file_name,TRUE) or die("failed  ". base_url().'image/pic_sale/'.$file_name);
+		//$this->service_m->delete_file($detail_id);
 		//delete_files('echo base_url()/image/pic_sale/', TRUE);----------------- ลบไฟล์ภาพ
-		redirect('admin_con/edit_admin/'.$page,'refresh');
+		//redirect('admin_con/edit_admin/'.$page,'refresh');
 	}
 
 	function edit_file($detail_id){
@@ -62,10 +69,10 @@ class Admin_con extends CI_Controller{
 		foreach ($query_detail as $key => $row) {
 			# code...
 			$data = array(
-					'detail_id' => $row->detail_id,
-					'detail_text' => $row->detail_text,
-					'detail_picname' => $rows->detail_picname,
-			);
+				'detail_id' => $row->detail_id,
+				'detail_text' => $row->detail_text,
+				'detail_picname' => $rows->detail_picname,
+				);
 			$this->load->view(	);
 		}
 	}
