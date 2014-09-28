@@ -50,13 +50,8 @@ class Admin_con extends CI_Controller{
 
 	//delete file picture
 	function delete_file($page,$detail_id,$file_name){
-
-		$path_file = $_SERVER['DOCUMENT_ROOT'].'/service_network/image/';
-		chmod($path_file, 0755);
-		if(is_file($path_file.'pic_sale/'.$file_name)){
-			delete_files($path_file.'pic_sale/'.$file_name)or die('failed deleting: ' . $path_file.'pic_sale/'.$file_name);
-		}
-		//delete_files(base_url().'image/pic_sale/'.$file_name,TRUE) or die("failed  ". base_url().'image/pic_sale/'.$file_name);
+			$path = base_url().'image/pic_sale/'.$file_name;
+			delete_files($path)or die("ไม่สามารถลบได้". anchor($path,"มันสิบ่มีได้จั่งใด๋กดเบิ่งดู๋บ่เสื่อนะ"));
 		//$this->service_m->delete_file($detail_id);
 		//delete_files('echo base_url()/image/pic_sale/', TRUE);----------------- ลบไฟล์ภาพ
 		//redirect('admin_con/edit_admin/'.$page,'refresh');

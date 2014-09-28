@@ -79,9 +79,10 @@ class Service_m extends CI_model {
 		foreach ($query_delete_file as $table => $row) {
 			# code...
 			delete_files(base_url().'image/pic_sale/'.$row->pic_name,TRUE) or die('failed');
+
 		}
 		//$query_detail = $this->db->query("DELETE FROM detail  WHERE  detail_id=".$detail_id);
-		return true;
+		//return true;
 	}
 }
 ?>
