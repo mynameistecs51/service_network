@@ -29,8 +29,6 @@
 		<div class="panel-body">
 			<ul class="nav nav-tabs" role="tablist">
 				<li class="active"><?php echo anchor('admin_con/edit_admin','เพิ่ม');?></li>
-				<li><a href="#">ลบ</a></li>
-				<li><?php echo anchor('admin_con/edit_file','แก้ไข');?></li>
 				<li><a href="#">ค้นหา</a></li>
 			</ul><br/>
 			

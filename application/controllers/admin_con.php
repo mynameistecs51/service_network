@@ -58,10 +58,20 @@ class Admin_con extends CI_Controller{
 	}
 
 	function edit_file($page,$detail_id){
+		$query_detail_by_id = $this->db->query(
+			"SELECT detail.detail_id, detail.detail_text, detail.pic_name , service_group.group_name
+			FROM detail
+			INNER JOIN service_group
+			ON detail.group_id = service_group.group_id
+			WHERE detail_id ='$detail_id';"
+			)->result(); 
+
 		$data = array(
 				'title' => "update_".$page,
 				'page' => $page,
 				'detail_id' => $detail_id,
+				'show_group' => $this->service_m->show_group(),
+				'query_detail_by_id' => $query_detail_by_id,
 			);
 		$this->load->view('edit_detail',$data);
 	}
