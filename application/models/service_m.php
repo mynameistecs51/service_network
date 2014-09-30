@@ -79,5 +79,16 @@ class Service_m extends CI_model {
 		$query_detail = $this->db->query("DELETE FROM detail  WHERE  detail_id=".$detail_id);
 		return true;
 	}
+
+	function update_detail(){
+
+		echo "detail=".$input_detail = $this->input->post('input_detail')."<br/>";
+		echo "group_id =".$input_group = $this->input->post('input_group')."<br/>";
+		echo "detail_id=".$input_id = $this->input->post('detail_id')."<br/>";
+		echo "user_file=".$picture_name = $this->input->post('userfile');
+
+
+		//$query_update_detail = $this->db->query('UPDATE detail SET detail_text = '.$input_detail.'group_id ='.$input_group.'WHERE detail_id='.$detail_id);
+	}
 }
 ?>

@@ -35,7 +35,7 @@
 			<div class="row col-md-offset-2">
 
 				<?php echo form_open_multipart('admin_con/add_detail',' class="form-horizontal" role="form" ');?>
-
+					
 				<div class="form-group col-xs-6 col-xs-6 .col-md-4">
 					<label for="input_search" class="col-sm-2 control-label">search</label>
 					<div class="col-sm-8">
@@ -96,6 +96,7 @@
 				<tbody>
 					<?php
 					foreach ($query_service_by_group as $key => $service_group_value) {
+						
 						echo "<tr >";
 						echo "<td>";
 						echo "#";

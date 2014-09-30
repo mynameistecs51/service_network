@@ -1,5 +1,4 @@
 <?php $this->load->view('head');?>
-<?php $this->load->view('head');?>
 <!-- โชว์รูปภาพก่อนอัพ -->
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -46,6 +45,7 @@
 				</div>
 				<?php foreach ($query_detail_by_id as $detail => $detail_row) {
 					# code... show detail by id
+					echo "<input type='hidden' name='detail_id' value='".$detail_row->detail_id."'>";
 				?>				
 				<div class="form-group col-xs-6">
 					<label for="input_group" class="col-sm-2 control-label">group</label>
@@ -90,6 +90,4 @@
 	</div>
 </div>
 </div>
-<?php $this->load->view('footter');?>
-
 <?php $this->load->view('footter');?>

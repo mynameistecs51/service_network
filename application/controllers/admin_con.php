@@ -75,5 +75,9 @@ class Admin_con extends CI_Controller{
 			);
 		$this->load->view('edit_detail',$data);
 	}
+
+	function update_detail(){
+			$this->service_m->update_detail();
+	}
 }
 ?>
