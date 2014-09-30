@@ -81,11 +81,15 @@ class Service_m extends CI_model {
 	}
 
 	function update_detail(){
+		$config['max_size']	= '6144';
+		$this->load->library('upload', $config);
+		$data = array('upload_data' => $this->upload->data());
+
 
 		echo "detail=".$input_detail = $this->input->post('input_detail')."<br/>";
 		echo "group_id =".$input_group = $this->input->post('input_group')."<br/>";
 		echo "detail_id=".$input_id = $this->input->post('detail_id')."<br/>";
-		echo "user_file=".$picture_name = $this->input->post('userfile');
+		echo 'file_name='.$data['upload_data']['file_name'];
 
 
 		//$query_update_detail = $this->db->query('UPDATE detail SET detail_text = '.$input_detail.'group_id ='.$input_group.'WHERE detail_id='.$detail_id);
