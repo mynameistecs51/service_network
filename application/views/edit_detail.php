@@ -46,6 +46,7 @@
 				<?php foreach ($query_detail_by_id as $detail => $detail_row) {
 					# code... show detail by id
 					echo "<input type='hidden' name='detail_id' value='".$detail_row->detail_id."'>";
+					echo "<input type='hidden' name='page' value='".$page."'>";
 				?>				
 				<div class="form-group col-xs-6">
 					<label for="input_group" class="col-sm-2 control-label">group</label>

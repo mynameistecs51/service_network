@@ -78,6 +78,7 @@ class Admin_con extends CI_Controller{
 
 	function update_detail(){
 			$this->service_m->update_detail();
+		redirect('admin_con/edit_admin/'.$this->input->post('page'),'refresh');
 	}
 }
 ?>

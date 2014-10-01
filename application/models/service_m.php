@@ -84,15 +84,52 @@ class Service_m extends CI_model {
 		$config['max_size']	= '6144';
 		$this->load->library('upload', $config);
 		$data = array('upload_data' => $this->upload->data());
+		$input_detail = $this->input->post('input_detail');
+		$input_group = $this->input->post('input_group');
+		$input_id = $this->input->post('detail_id');
+		$file_name =$_FILES['userfile']['name'];
+		$query_detail = $this->db->query("SELECT * FROM detail WHERE detail_id=".$input_id)->result_array();  //query detail
 
+		if(!$file_name){   //-------- userfile == null
+			$insert = array(
+				'detail_text' => $input_detail,
+				'group_id' => $input_group,
+				);
+			$this->db->where('detail_id',$input_id);
+			$this->db->update('detail',$insert);
 
-		echo "detail=".$input_detail = $this->input->post('input_detail')."<br/>";
-		echo "group_id =".$input_group = $this->input->post('input_group')."<br/>";
-		echo "detail_id=".$input_id = $this->input->post('detail_id')."<br/>";
-		echo 'file_name='.$data['upload_data']['file_name'];
+			return TRUE;
+			
+		}else{
+			//---- userfile != null delete picture ago and update new picture
+			foreach ($query_detail as $detail => $row) {
+				# code...
+				unlink('../service_network/image/pic_sale/'.$row['pic_name']);		//----------ถ้า up ขึ้น host จริงมันจะมีปัญหาตรง path ../		
+				$this->load->library('upload', $config);
+				if ( !$this->upload->do_upload()){
+					$error = array('error' => $this->upload->display_errors());
+					$this->load->view('admin/edit_admin', $error);
+						//redirect('admin_con/edit_admin/error','refresh');
 
+				}else{
+					$data = array('upload_data' => $this->upload->data());
+						//$this->model_main->create_teacher();  //create data file for database
+						//$this->load->view('page_teacher', $data);
+						// redirect('ctl_main/page_teacher/',$data);
 
-		//$query_update_detail = $this->db->query('UPDATE detail SET detail_text = '.$input_detail.'group_id ='.$input_group.'WHERE detail_id='.$detail_id);
+					$insert = array(
+						'detail_text' => $input_detail,
+						'pic_name' => $data['upload_data']['file_name'],
+						'pic_type' => $data['upload_data']['file_type'],
+						'group_id' => $input_group,
+						);
+					$this->db->where('detail_id',$input_id);
+					$this->db->update('detail',$insert);
+
+				}		
+				return TRUE;
+			}
+		}
 	}
 }
 ?>
