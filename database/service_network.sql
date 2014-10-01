@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2014 at 04:22 PM
+-- Generation Time: Oct 01, 2014 at 05:54 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `detail` (
 --
 
 INSERT INTO `detail` (`detail_id`, `detail_text`, `pic_name`, `pic_type`, `group_id`) VALUES
-(57, 'test', '2014_09_288503.jpg', 'image/jpeg', 1),
+(57, 'test 123', '2014_09_288503.jpg', 'image/jpeg', 1),
 (58, 'ระบบเครือข่ายและอินเตอร์เน็ต', '2014_09_292117.jpg', 'image/jpeg', 2);
 
 -- --------------------------------------------------------
