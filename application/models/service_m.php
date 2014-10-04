@@ -81,7 +81,13 @@ class Service_m extends CI_model {
 	}
 
 	function update_detail(){
+		$config['upload_path'] = './image/pic_sale/';
+		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '6144';
+		//$config['encrypt_name'] = TRUE;
+		$rand = rand(1111,9999);
+		$date= date("Y_m_d");
+		$config['file_name']  = $date.$rand;//----------------file_name
 		$this->load->library('upload', $config);
 		$data = array('upload_data' => $this->upload->data());
 		$input_detail = $this->input->post('input_detail');
