@@ -1,5 +1,5 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed');
-
+session_start(); //we need to call PHP's session object to access it through CI
 class Admin_con extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
@@ -7,13 +7,19 @@ class Admin_con extends CI_Controller{
 	}
 
 	public function index(){
-
-		$data = array(
-			'title' => "configuration",
-			);
-		
-		$this->load->view('/admin/admin',$data);
-
+		if($this->session->userdata('logged_in'))
+		{
+			$session_data = $this->session->userdata('logged_in');
+			$data = array(
+				'user_name' =>$session_data['user_name'],
+				'title' => "configuration",
+				);
+			$this->load->view('/admin/admin',$data);
+		}
+		else
+		{		
+			redirect('login','refresh');
+		}
 	}
 
 	public function edit_admin($page){
@@ -47,13 +53,12 @@ class Admin_con extends CI_Controller{
 		}
 	}
 
-
 	//delete file picture
 	function delete_file($page,$detail_id,$file_name){
-			unlink('../service_network/image/pic_sale/'.$file_name);		//----------ถ้า up ขึ้น host จริงมันจะมีปัญหาตรง path ../service_network
-		
+		unlink('../service_network/image/pic_sale/'.$file_name);		//----------ถ้า up ขึ้น host จริงมันจะมีปัญหาตรง path ../service_network
+
 		$this->service_m->delete_file($detail_id);
-		
+
 		redirect('admin_con/edit_admin/'.$page,'refresh');
 	}
 
@@ -67,18 +72,24 @@ class Admin_con extends CI_Controller{
 			)->result(); 
 
 		$data = array(
-				'title' => "update_".$page,
-				'page' => $page,
-				'detail_id' => $detail_id,
-				'show_group' => $this->service_m->show_group(),
-				'query_detail_by_id' => $query_detail_by_id,
+			'title' => "update_".$page,
+			'page' => $page,
+			'detail_id' => $detail_id,
+			'show_group' => $this->service_m->show_group(),
+			'query_detail_by_id' => $query_detail_by_id,
 			);
 		$this->load->view('edit_detail',$data);
 	}
 
 	function update_detail(){
-			$this->service_m->update_detail();
+		$this->service_m->update_detail();
 		redirect('admin_con/edit_admin/'.$this->input->post('page'),'refresh');
+	}
+
+	function logout(){
+		$this->session->unset_userdata('logged_in');
+		session_destroy();
+		redirect('service_con', 'refresh');
 	}
 }
 ?>
