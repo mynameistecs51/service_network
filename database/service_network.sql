@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2014 at 12:23 PM
+-- Generation Time: Oct 04, 2014 at 06:20 AM
 -- Server version: 5.5.36
 -- PHP Version: 5.4.25
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `detail` (
   `pic_type` varchar(50) NOT NULL,
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`detail_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=63 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
 
 --
 -- Dumping data for table `detail`
@@ -41,8 +41,7 @@ CREATE TABLE IF NOT EXISTS `detail` (
 
 INSERT INTO `detail` (`detail_id`, `detail_text`, `pic_name`, `pic_type`, `group_id`) VALUES
 (58, 'ระบบเครือข่ายและอินเตอร์เน็ต', '2014_09_292117.jpg', 'image/jpeg', 2),
-(60, 'network admin  ', '2014_10_041155.gif', 'image/gif', 1),
-(62, 'cctv', '2014_10_042506.gif', 'image/gif', 3);
+(60, 'network admin  ', '2014_10_041155.gif', 'image/gif', 1);
 
 -- --------------------------------------------------------
 
@@ -65,27 +64,6 @@ INSERT INTO `service_group` (`group_id`, `group_name`) VALUES
 (2, 'Network'),
 (3, 'CCTV'),
 (4, 'Profile_ago');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE IF NOT EXISTS `users` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(100) NOT NULL,
-  `user_passwd` varchar(100) NOT NULL,
-  `user_status` enum('admin','user') NOT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `users` (`user_id`, `user_name`, `user_passwd`, `user_status`) VALUES
-(1, 'chaiwat', '1234', 'admin');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
