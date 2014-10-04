@@ -53,7 +53,6 @@
 					<div class="col-sm-8">
 						<select class="form-control" id="input_group" name="input_group" >
 							<?php
-
 								foreach ($show_group as $group => $service_group) {
 									// code...	select group ....
 										$selected = ($service_group->group_name == $page? "selected":"");
