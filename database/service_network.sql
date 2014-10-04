@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 4.1.6
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2014 at 05:54 PM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Generation Time: Oct 04, 2014 at 06:20 AM
+-- Server version: 5.5.36
+-- PHP Version: 5.4.25
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -33,15 +33,15 @@ CREATE TABLE IF NOT EXISTS `detail` (
   `pic_type` varchar(50) NOT NULL,
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`detail_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
 
 --
 -- Dumping data for table `detail`
 --
 
 INSERT INTO `detail` (`detail_id`, `detail_text`, `pic_name`, `pic_type`, `group_id`) VALUES
-(57, 'test 123', '2014_09_288503.jpg', 'image/jpeg', 1),
-(58, 'ระบบเครือข่ายและอินเตอร์เน็ต', '2014_09_292117.jpg', 'image/jpeg', 2);
+(58, 'ระบบเครือข่ายและอินเตอร์เน็ต', '2014_09_292117.jpg', 'image/jpeg', 2),
+(60, 'network admin  ', '2014_10_041155.gif', 'image/gif', 1);
 
 -- --------------------------------------------------------
 
