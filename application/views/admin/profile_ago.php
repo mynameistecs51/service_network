@@ -34,7 +34,7 @@
 			
 			<div class="row col-md-offset-2">
 
-				<?php echo form_open_multipart('admin_con/add_detail',' class="form-horizontal" role="form" ');?>
+				<?php echo form_open_multipart('admin_con/do_upload',' class="form-horizontal" role="form" ');?>
 					
 				<div class="form-group col-xs-6 col-xs-6 .col-md-4">
 					<label for="input_search" class="col-sm-2 control-label">search</label>
@@ -72,7 +72,7 @@
 						<label for="input_picture" class="col-sm-2 control-label">picture	</label>
 						<div class="col-sm-8">
 							<img id="show_pic" src="<?php echo base_url().'image/pic_admin/no-image.jpg';?>" style="width:130px; height:70px" /><br/>
-							<input type="file" id="userfile" class="form-control" name="userfile" size="20" onchange="PreviewImage();" multiple/>
+							<input type="file" id="images" class="form-control" name="images[]" size="20" onchange="PreviewImage();" multiple/>
 						</div>
 					</div>
 

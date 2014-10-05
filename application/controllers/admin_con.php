@@ -140,5 +140,18 @@ class Admin_con extends CI_Controller{
 	}
 
 
+	public function do_upload(){
+    $config['upload_path'] = './image/pic_sale/';
+    $config['allowed_types'] = 'gif|jpg|png';
+    //...
+
+    $this->load->library('upload',$config);
+
+    if ($_FILES['images']) {
+        $images= $this->service_m->_upload_files('images');
+        print_r($images);
+    }
+}
+
 }
 ?>
