@@ -5,18 +5,34 @@ class Service_con extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model("service_m",'',TRUE);
+		
 	}
 	
-	public function index()
-	{
-		
-		$data = array(
-			'title' => "Network Service & Solution",
+	public function index(){
 
-			'show_detail' => $this->service_m->get_detail(),
+		if($this->session->userdata('logged_in'))
+		{
+			$session_data = $this->session->userdata('logged_in');
+			
+			$data = array(
+				'title' => "Network Service & Solution",
+				'user_name' =>$session_data['user_name'],
+				'show_detail' => $this->service_m->get_detail(),
+				);
+
+			$this->load->view('index',$data);
+		}
+		else
+		{		
+			$data = array(
+				'title' => "Network Service & Solution",
+				'show_detail' => $this->service_m->get_detail(),
+				'user_name' => "",
 			);
 
-		$this->load->view('index',$data);
+			$this->load->view('index',$data);
+		}
+		
 	}
 
 	public function show_detail($page){
@@ -40,7 +56,7 @@ class Service_con extends CI_Controller {
 	public function contact($page){
 		$data = array(
 			'title' => $page,
-		);
+			);
 		$this->load->view('contact',$data);
 
 	}

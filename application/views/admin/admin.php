@@ -31,7 +31,7 @@
 	</div>
 	<div class="col-xs-6 col-md-3 " align="center">  
 		<div class="panel panel-primary " >
-			<?php echo anchor('admin_con/edit_admin/Profile_ago/','<div class="panel-body" >
+			<?php echo anchor('admin_con/profile_ago/Profile_ago/','<div class="panel-body" >
 				<img src=" '.base_url().'image/pic_admin/Bee-Customized-icon.jpg"  style="width:200px; height:150px; "> 
 			</div>
 			<div class="panel-footer" align="center"><b> Profile_ago  </b></div>
