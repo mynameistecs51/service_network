@@ -86,7 +86,7 @@ class Admin_con extends CI_Controller{
 		redirect('admin_con/edit_admin/'.$this->input->post('page'),'refresh');
 	}
 
-//logout distroy session for logout function
+//logout distroy session
 	function logout(){
 		$this->session->unset_userdata('logged_in');
 		session_destroy();
