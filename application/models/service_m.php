@@ -143,7 +143,6 @@ class Service_m extends CI_model {
 		foreach( $_FILES[$field] as $key => $all )
 			foreach( $all as $i => $val )
 				$files[$i][$key] = $val;
-
 			$files_uploaded = array();
 			for ($i=0; $i < count($files); $i++) { 
 				$_FILES[$field] = $files[$i];
@@ -155,6 +154,6 @@ class Service_m extends CI_model {
 			return $files_uploaded;
 		}
 	}
-	
+
 
 	?>
