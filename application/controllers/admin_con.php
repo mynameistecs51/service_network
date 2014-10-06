@@ -148,10 +148,12 @@
 			$this->load->library('upload',$config);
 
 			if ($_FILES['images']) {			
-	        //$images= $this->service_m->_upload_files('images');
-				//print_r($_FILES['images']['name']);
-				foreach ($_FILES['images'] as $key => $value) {
-					echo $value['0']['0'];
+				//$images= $this->service_m->_upload_files('images');
+
+				foreach ($_FILES['imag'] as $key => $value) {
+				 	# code...
+				 } ($_FILES['images']['name'] as $key => $picture_name) {
+					echo $picture_name.",";
 					// foreach ($value as $keys => $all) {
 					// 	echo $key.'='. $all."<br/>";
 					// }
