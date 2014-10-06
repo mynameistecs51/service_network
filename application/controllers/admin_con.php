@@ -141,25 +141,17 @@
 
 
 		public function do_upload(){
-			$config['upload_path'] = './image/pic_sale/';
-			$config['allowed_types'] = 'gif|jpg|png';
-	    //...
 
-			$this->load->library('upload',$config);
 
-			if ($_FILES['images']) {			
-				//$images= $this->service_m->_upload_files('images');
+		
 
-				foreach ($_FILES['imag'] as $key => $value) {
-				 	# code...
-				 } ($_FILES['images']['name'] as $key => $picture_name) {
-					echo $picture_name.",";
-					// foreach ($value as $keys => $all) {
-					// 	echo $key.'='. $all."<br/>";
-					// }
-				}
-			}
+
+			$images= $this->service_m->_upload_files('images');
+
+			//$this->db->insert('detail',$insert);
+			//redirect('admin_con/edit_admin/'.$page,'refresh');
 		}
+		
 	}
 
 	?>

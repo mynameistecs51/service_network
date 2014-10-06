@@ -35,7 +35,7 @@
 			<div class="row col-md-offset-2">
 
 				<?php echo form_open_multipart('admin_con/do_upload',' class="form-horizontal" role="form" ');?>
-					
+				<?php echo "<input type='hidden' name='page' value='".$page."'>";?>
 				<div class="form-group col-xs-6 col-xs-6 .col-md-4">
 					<label for="input_search" class="col-sm-2 control-label">search</label>
 					<div class="col-sm-8">
@@ -96,31 +96,37 @@
 				<tbody>
 					<?php
 					foreach ($query_service_by_group as $key => $service_group_value) {
-						
-						echo "<tr >";
-						echo "<td>";
-						echo "#";
-						echo "</td>";
-						echo "<td width=400px>";
-								echo $service_group_value->detail_text;		//โชว์ รายละเอียด
-								echo "</td>";
-								echo "<td>";	
-								echo "<img src=".base_url()."image/pic_sale/".$service_group_value->pic_name." width=100px height=70px>";			///โชว์รูปภาพ
-								echo "</td>";
-								echo "<td>";
-								echo $service_group_value->group_name;		//โชว์กลุ่ม
-								echo "</td>";
-								echo "<td>";
+						?>
+						<tr >
+							<td>
+								#
+							</td>
+							<td width=400px>
+								<?php echo $service_group_value->detail_text;	//โชว์ รายละเอียด?>
+							</td>
+							<td>	<!-- ///โชว์รูปภาพ -->
+								<img src="<?php echo base_url()."image/pic_sale/".$service_group_value->pic_name ;?>" width=100px height=70px>			
+								<?php
+								echo $service_group_value->pic_name;
+								?>
+							</td>
+							<td>
+								<?php echo $service_group_value->group_name;?>		<!-- //โชว์กลุ่ม -->
+							</td>
+							<td>
+								<?php 
 								echo anchor('admin_con/edit_file/'.$page.'/'.$service_group_value->detail_id,'แก้ไข  ','&nbsp;&nbsp;');
-								echo anchor('admin_con/delete_file/'.$page.'/'.$service_group_value->detail_id.'/'.$service_group_value->pic_name,'ลบ	');
-								echo "</td>";
-								echo "</tr>";
-							}
-							?>
-						</tbody>
-					</table>	
-				</div>
-			</div>
+								echo anchor('admin_con/delete_file/'.$page.'/'.$service_group_value->detail_id.'/'.$service_group_value->pic_name,'ลบ	'); 
+								?>
+							</td>
+						</tr>
+						<?php
+					}
+					?>
+				</tbody>
+			</table>	
 		</div>
 	</div>
-	<?php $this->load->view('footter');?>
+</div>
+</div>
+<?php $this->load->view('footter');?>
