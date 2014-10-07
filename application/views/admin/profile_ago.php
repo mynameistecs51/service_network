@@ -106,8 +106,11 @@
 							</td>
 							<td>	<!-- ///โชว์รูปภาพ -->
 								<img src="<?php echo base_url()."image/pic_sale/".$service_group_value->pic_name ;?>" width=100px height=70px>			
-								<?php
-								echo $service_group_value->pic_name;
+								
+							</td>
+							<td >
+							<?php
+								echo "pictrue_name = ".explode(",",$service_group_value->pic_name);
 								?>
 							</td>
 							<td>

@@ -140,17 +140,6 @@ class Service_m extends CI_model {
 
 	function _upload_files($field='userfile'){
 
-		$config['upload_path'] = './image/pic_sale/';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '6144';
-		$rand = rand(1111,9999);
-		$date= date("Y_m_d");
-		$input_detail = $this->input->post('input_detail');
-		$input_group = $this->input->post('input_group');
-		$page = $this->input->post('page');
-	    //...
-		$this->load->library('upload',$config);
-
 		$files = array();
 		foreach( $_FILES[$field] as $key => $all )
 			foreach( $all as $i => $val )
@@ -163,26 +152,7 @@ class Service_m extends CI_model {
 				else
 					$files_uploaded[$i] = null;
 			}
-
-
-			$name_picture ="";
-			$type_picture ="";
-			foreach ($_FILES['images']['name'] as $key_name => $picture_name) {
-				foreach ($_FILES['images']['type'] as $key_type => $picture_type){
-					//ไม่มีอะไรให้มัข้างไปแสดงใน foreach$_FILES['images']['name'] เลย
-				}
-				$name_picture.= $date.$rand.$picture_name.",";
-				$type_picture.=$picture_type.",";
-			}
-			$insert = array(
-				'detail_id' => "",
-				'detail_text' => $input_detail,
-				'pic_name' => $name_picture,
-				'pic_type' => $type_picture,
-				'group_id' => $input_group,
-				);	
-			print_r($insert);
-			//return $files_uploaded;
+			return $files_uploaded;
 		}
 	}
 ?>
