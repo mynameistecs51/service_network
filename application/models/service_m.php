@@ -20,9 +20,10 @@ class Service_m extends CI_model {
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '6144';
 		//$config['encrypt_name'] = TRUE;
+		$file_name =$_FILES['userfile']['name'];
 		$rand = rand(1111,9999);
 		$date= date("Y_m_d");
-		$config['file_name']  = $date.$rand;//----------------file_name
+		$config['file_name']  = $date.$rand.$file_name;//----------------file_name
 		//$config['max_width']  = '1024';
 		//$config['max_height']  = '768';
 
@@ -41,7 +42,7 @@ class Service_m extends CI_model {
 			$insert = array(
 				'detail_id' => "",
 				'detail_text' => $input_detail,
-				'pic_name' => $date.$rand.$data['upload_data']['file_name'],
+				'pic_name' => $config['file_name'] ,
 				'pic_type' => $data['upload_data']['file_type'],
 				'group_id' => $input_group,
 				);
@@ -85,15 +86,15 @@ class Service_m extends CI_model {
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '6144';
 		//$config['encrypt_name'] = TRUE;
+		$file_name =$_FILES['userfile']['name'];
 		$rand = rand(1111,9999);
 		$date= date("Y_m_d");
-		$config['file_name']  = $date.$rand;//----------------file_name
-		$this->load->library('upload', $config);
-		$data = array('upload_data' => $this->upload->data());
+		$config['file_name']  = $date.$rand.$file_name;//----------------file_name
+		// $this->load->library('upload', $config);
+		// $data = array('upload_data' => $this->upload->data());
 		$input_detail = $this->input->post('input_detail');
 		$input_group = $this->input->post('input_group');
 		$input_id = $this->input->post('detail_id');
-		$file_name =$_FILES['userfile']['name'];
 		$query_detail = $this->db->query("SELECT * FROM detail WHERE detail_id=".$input_id)->result_array();  //query detail
 
 		if(!$file_name){   //-------- userfile == null
@@ -112,6 +113,7 @@ class Service_m extends CI_model {
 				# code...
 				unlink('../service_network/image/pic_sale/'.$row['pic_name']);		//----------ถ้า up ขึ้น host จริงมันจะมีปัญหาตรง path ../		
 				$this->load->library('upload', $config);
+
 				if ( !$this->upload->do_upload()){
 					$error = array('error' => $this->upload->display_errors());
 					$this->load->view('admin/edit_admin', $error);
