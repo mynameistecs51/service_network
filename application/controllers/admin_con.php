@@ -157,6 +157,7 @@ public function do_upload(){
 	//$file_name =$_FILES['images']['name'];
 	//$config['file_name'] = $date.$rand.$file_name;
 
+	
 
 	foreach ($_FILES['images']['name'] as $key_name => $picture_name) {
 		foreach ($_FILES['images']['type'] as $key_type => $picture_type){
@@ -165,10 +166,9 @@ public function do_upload(){
 		$name_picture.= $date.$rand.$picture_name.",";
 		$type_picture.=$picture_type.",";
 
-	//$config['file_name'] = $picture_name;//----------------file_name
-
 	}
-
+								
+$config['file_name'] = $name_picture;//----------------file_name
 $this->load->library('upload',$config);
 $images= $this->service_m->_upload_files('images');
 
