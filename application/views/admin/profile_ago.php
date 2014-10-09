@@ -105,10 +105,6 @@
 								<?php echo $service_group_value->detail_text;	//โชว์ รายละเอียด?>
 							</td>
 							<td>	<!-- ///โชว์รูปภาพ -->
-								<img src="<?php echo base_url()."image/pic_sale/".$service_group_value->pic_name ;?>" width=100px height=70px>			
-								
-							</td>
-							<td >
 								<?php
 								$picture_name_array = explode(',', $service_group_value->pic_name);
 								foreach ($picture_name_array as $key => $value) {
@@ -124,7 +120,7 @@
 							<td>
 								<?php 
 								echo anchor('admin_con/edit_file/'.$page.'/'.$service_group_value->detail_id,'แก้ไข  ','&nbsp;&nbsp;');
-								echo anchor('admin_con/delete_file/'.$page.'/'.$service_group_value->detail_id.'/'.$service_group_value->pic_name,'ลบ	'); 
+								echo anchor('admin_con/delete_file/'.$page.'/'.$service_group_value->detail_id,'ลบ	'); 
 								?>
 							</td>
 						</tr>

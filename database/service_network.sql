@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2014 at 05:06 PM
+-- Generation Time: Oct 09, 2014 at 03:51 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -33,17 +33,17 @@ CREATE TABLE IF NOT EXISTS `detail` (
   `pic_type` varchar(50) NOT NULL,
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`detail_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=64 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=85 ;
 
 --
 -- Dumping data for table `detail`
 --
 
 INSERT INTO `detail` (`detail_id`, `detail_text`, `pic_name`, `pic_type`, `group_id`) VALUES
-(58, 'ระบบเครือข่ายและอินเตอร์เน็ต', '2014_09_292117.jpg', 'image/jpeg', 2),
 (60, 'network admin  ', '2014_10_041155.gif', 'image/gif', 1),
 (62, 'cctv', '2014_10_042506.gif', 'image/gif', 3),
-(63, '11', '2014_10_058761.jpg', 'image/jpeg', 4);
+(83, 'test', '2014_10_09226910468643_909074712451694_3640265449689362938_n.jpg', 'image/jpeg', 2),
+(84, 'test', '2014_10_0972001370826027-image-o.jpg', 'image/jpeg', 4);
 
 -- --------------------------------------------------------
 

@@ -66,12 +66,31 @@ foreach ($sql->result() as $key => $value) {
 }
 
 //delete file picture
-function delete_file($page,$detail_id,$file_name){
-unlink('../service_network/image/pic_sale/'.$file_name);		//----------ถ้า up ขึ้น host จริงมันจะมีปัญหาตรง path ../service_network
+function delete_file($page,$detail_id){
+	$query_delete_file = $this->db->query("SELECT * FROM detail WHERE detail_id =".$detail_id)->result();
+	foreach ($query_delete_file as $tabel_detail => $row_detail) {
 
-$this->service_m->delete_file($detail_id);
+		$pic_name_explode = explode(",", $row_detail->pic_name);
+		for ($i = 0; $i < count($pic_name_explode); $i++) {
+			unlink('../service_network/image/pic_sale/'.$pic_name_explode[$i]);
+		}
+	}
+	// if(unlink('../service_network/image/pic_sale/'.$file_name)){
 
-redirect('admin_con/edit_admin/'.$page,'refresh');
+	// 	$file_name_ = explode(',', $file_name);
+	// 	foreach ($file_name_ as $key => $value_name) {
+
+	// 		unlink('../service_network/image/pic_sale/'.$value_name);	//----------ถ้า up ขึ้น host จริงมันจะมีปัญหาตรง path ../service_network
+	// 		echo "1";
+	// 	}
+	// }else{
+	// 	echo "2";
+	// 	unlink('../service_network/image/pic_sale/'.$file_name);	//----------ถ้า up ขึ้น host จริงมันจะมีปัญหาตรง path ../service_network
+	// }
+
+	$this->service_m->delete_file($detail_id);
+
+	redirect('admin_con/edit_admin/'.$page,'refresh');
 }
 
 function edit_file($page,$detail_id){
@@ -147,43 +166,43 @@ public function do_upload(){
 //...
 	$rand = rand(1111,9999);
 	$date= date("Y_m_d");
-	$name_picture ="";
+	$name_picture = "";
 	$type_picture ="";
 
 	$config['upload_path'] = './image/pic_sale/';
 	$config['allowed_types'] = 'gif|jpg|png';
 	$config['max_size']	= '6144';
 //$config['encrypt_name'] = TRUE;
-	//$file_name =$_FILES['images']['name'];
-	//$config['file_name'] = $date.$rand.$file_name;
+//$file_name =$_FILES['images']['name'];
+//$config['file_name'] = $date.$rand.$file_name;
 
-	
+
 
 	foreach ($_FILES['images']['name'] as $key_name => $picture_name) {
 		foreach ($_FILES['images']['type'] as $key_type => $picture_type){
 //ไม่มีอะไรให้มัข้างไปแสดงใน foreach$_FILES['images']['name'] เลย
 		}
-		$name_picture.= $date.$rand.$picture_name.",";
-		$type_picture.=$picture_type.",";
-
+		$name_picture .= $picture_name.",";
+		$type_picture .=$picture_type.",";
 	}
-								
-$config['file_name'] = $name_picture;//----------------file_name
-$this->load->library('upload',$config);
-$images= $this->service_m->_upload_files('images');
+
+//$config['file_name'] =$name_picture;//----------------file_name
 
 
-$insert = array(
-	'detail_id' => "",
-	'detail_text' => $input_detail,
-	'pic_name' => $name_picture,
-	'pic_type' => $type_picture,
-	'group_id' => $input_group,
-	);
+	$this->load->library('upload',$config);
+	$images= $this->service_m->_upload_files('images');
+
+	$insert = array(
+		'detail_id' => "",
+		'detail_text' => $input_detail,
+		'pic_name' => $name_picture ,
+		'pic_type' => $type_picture,
+		'group_id' => $input_group,
+		);
 
 
-// $this->db->insert('detail',$insert);
-// redirect('admin_con/profile_ago/'.$page,'refresh');
+	$this->db->insert('detail',$insert);
+	redirect('admin_con/profile_ago/'.$page,'refresh');
 }
 
 }
