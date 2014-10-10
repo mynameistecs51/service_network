@@ -11,7 +11,7 @@
 					<?php echo anchor('service_con/show_detail/Network_admin/',"Network_Admin",'class="list-group-item"');?>
 					<?php echo anchor('service_con/show_detail/Network/',"Network",'class="list-group-item"');?>
 					<?php echo anchor('service_con/show_detail/CCTV/',"CCTV",'class="list-group-item"');?>
-					<?php echo anchor('service_con/show_detail/Portfolio_ago/',"ผลงานที่ผ่านมา",'class="list-group-item"');?>
+					<?php echo anchor('service_con/show_detail/Profile_ago/',"ผลงานที่ผ่านมา",'class="list-group-item"');?>
 
 				</div>
 			</div>
@@ -19,38 +19,43 @@
 	</div>
 
 	<div class="col-md-9">
-	<h3><?php echo "Service & ".$page;?></h3><br/><hr/>
-		<div class="row">
-		<?php
-			foreach ($show_by_group as $key => $show_detail_by_group) {
+		<h1 align="center"><span class="label label-info"><?php echo "Service & ".$page;?></span></h3><hr/>
+			<div class="row">
+				<?php
+				foreach ($show_by_group as $key => $show_detail_by_group) {
 				# code... show detail by group 
-			?>				
-		
-			<div class="col-sm-4 col-lg-4 col-md-4">
-				<div class="thumbnail">
-					<img src="<?php echo base_url().'image/pic_sale/'.$show_detail_by_group->pic_name;?>" alt="" style="width:320px; height:150px;">
-					<div class="caption">
-						<h4 class="pull-right">xxxB.-</h4>
-						<h4><a href="#"><?php echo $show_detail_by_group->group_name;?></a>
-						</h4>
-						<p><?php echo $show_detail_by_group->detail_text;?></p>
-					</div>
-					<div class="ratings">
-						<p class="pull-right">15 reviews</p>
-						<p>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-							<span class="glyphicon glyphicon-star"></span>
-						</p>
+					?>				
+
+					<div class="col-sm-4 col-lg-4 col-md-4">
+						<div class="thumbnail">
+							<?php $picture_name_array = explode(',', $show_detail_by_group->pic_name);?>
+							<img src="<?php echo base_url().'image/pic_sale/'.$picture_name_array[0];?>" alt="" style="width:320px; height:150px;">
+							
+							<div class="caption">
+								<h4 class="pull-right">xxxB.-</h4>
+								<h4><a href="#">
+
+									<?php echo $show_detail_by_group->group_name;?>
+								</a>
+							</h4>
+							<p><?php echo $show_detail_by_group->detail_text;?></p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">15 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
 
-		<?php
+				<?php
 			}
-		?>
+			?>
 
 			<div class="col-sm-4 col-lg-4 col-md-4">
 				<h4><a href="#">ยังมีที่ว่างสำหรับคุณ</a>

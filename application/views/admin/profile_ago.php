@@ -109,7 +109,7 @@
 								$picture_name_array = explode(',', $service_group_value->pic_name);
 								foreach ($picture_name_array as $key => $value) {
 									?>
-									<img src="<?php echo base_url()."image/pic_sale/".$value ;?>" width=100px height=70px>'
+									<img src="<?php echo base_url()."image/pic_sale/".$value ;?>" width=100px height=70px>
 									<?php 
 								}
 								?>
