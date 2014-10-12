@@ -38,10 +38,9 @@
 					echo '<img src='.base_url().'image/pic_sale/'.$value_detail.' alt="" width=350px height=220px> &nbsp;';
 
 				}
-					echo "<br/><br/>";
 
 					//show detail text
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$row->detail_text;
+					echo "<h3><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$row->detail_text."</span></h>";
 			}
 			?>
 		
