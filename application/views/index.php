@@ -82,7 +82,7 @@
                     <img src="<?php echo base_url().'image/pic_sale/'.$picture_name_array[0];?>" alt="" style="width:320px; height:150px;">
                     <div class="caption">
                         <h4 class="pull-right">xxxB.-</h4>
-                        <h4><a href="#"><?php echo $value_detail->group_name;?></a>
+                        <h4><?php echo anchor('service_con/show_detail_list/'.$value_detail->detail_id,$value_detail->group_name);?></a>
                         </h4>
                         <p><?php echo $value_detail->detail_text;?></p>
                     </div>

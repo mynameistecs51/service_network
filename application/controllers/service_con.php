@@ -28,7 +28,7 @@ class Service_con extends CI_Controller {
 				'title' => "Network Service & Solution",
 				'show_detail' => $this->service_m->get_detail(),
 				'user_name' => "",
-			);
+				);
 
 			$this->load->view('index',$data);
 		}
@@ -59,6 +59,12 @@ class Service_con extends CI_Controller {
 			);
 		$this->load->view('contact',$data);
 
+	}
+
+	function show_detail_list(){
+		$data = arrya(
+
+			);
 	}
 
 }
