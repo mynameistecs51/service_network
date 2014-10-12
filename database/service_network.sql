@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2014 at 03:51 PM
+-- Generation Time: Oct 12, 2014 at 04:45 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `detail` (
   `detail_id` int(11) NOT NULL AUTO_INCREMENT,
   `detail_text` text NOT NULL,
-  `pic_name` varchar(100) NOT NULL,
+  `pic_name` text NOT NULL,
   `pic_type` varchar(50) NOT NULL,
   `group_id` int(11) NOT NULL,
   PRIMARY KEY (`detail_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=85 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=86 ;
 
 --
 -- Dumping data for table `detail`
@@ -43,7 +43,8 @@ INSERT INTO `detail` (`detail_id`, `detail_text`, `pic_name`, `pic_type`, `group
 (60, 'network admin  ', '2014_10_041155.gif', 'image/gif', 1),
 (62, 'cctv', '2014_10_042506.gif', 'image/gif', 3),
 (83, 'test', '2014_10_09226910468643_909074712451694_3640265449689362938_n.jpg', 'image/jpeg', 2),
-(84, 'test', '2014_10_0972001370826027-image-o.jpg', 'image/jpeg', 4);
+(84, 'test', '2014_10_0972001370826027-image-o.jpg', 'image/jpeg', 4),
+(85, '555', '10277562_330018597150296_7775052259207815272_n.jpg,10468643_909074712451694_3640265449689362938_n.jpg', 'image/jpeg,image/jpeg,', 4);
 
 -- --------------------------------------------------------
 
