@@ -53,7 +53,7 @@
                                 
                                 echo "<div class='item'>";
                                    
-                                echo "<img class='slide-image' src=".base_url()."image/pic_sale/".$value_picture_name." alt=' style='width:850px; height:300px;'>";                            
+                                echo "<img class='slide-image' src=".base_url()."image/pic_sale/".$value_picture_name." alt='' style='width:850px; height:300px;'>";                            
                                 echo "</div>";
                             }
                         }
