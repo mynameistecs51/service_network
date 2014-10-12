@@ -33,10 +33,7 @@
 							
 							<div class="caption">
 								<h4 class="pull-right">xxxB.-</h4>
-								<h4><a href="#">
-
-									<?php echo $show_detail_by_group->group_name;?>
-								</a>
+								<h4><?php echo anchor('service_con/show_detail_list/'.$show_detail_by_group->detail_id,$show_detail_by_group->group_name);?>
 							</h4>
 							<p><?php echo $show_detail_by_group->detail_text;?></p>
 						</div>

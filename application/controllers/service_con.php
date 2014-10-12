@@ -61,10 +61,15 @@ class Service_con extends CI_Controller {
 
 	}
 
-	function show_detail_list(){
-		$data = arrya(
-
+	function show_detail_list($detail_id){
+		$query_detail = $this->db->query("SELECT * FROM detail WHERE detail_id=".$detail_id)->result();
+		$data = array(
+			'title' => 'รายเอียด',
+			'query_detail' => $query_detail, //query detail
+			'detail_id_' => $detail_id,
 			);
+
+		$this->load->view('show_detail_list',$data);
 	}
 
 }
