@@ -5,7 +5,7 @@
 	<div class="col-xs-5 col-md-3 " align="center">  
 		<div class="panel panel-primary " >
 			<?php echo anchor('admin_con/edit_admin/Network_admin/','<div class="panel-body" >
-				<img src=" '.base_url().'image/pic_admin/network_admin.jpg" style="width:200px; height:150px;">
+				<img src=" '.base_url().'image/pic_admin/network_admin.jpg"  alt="" style="width:200px; height:150px;">
 			</div>
 			<div class="panel-footer" align="center"><b> Network Admin </b></div>
 			');?>       
@@ -14,7 +14,7 @@
 	<div class="col-xs-6 col-md-3 " align="center">  
 		<div class="panel panel-primary " >
 			<?php echo anchor('admin_con/edit_admin/Network/','<div class="panel-body" >
-				<img src=" '.base_url().'image/pic_admin/network.jpg"  style="width:200px; height:150px;"> 
+				<img src=" '.base_url().'image/pic_admin/network.jpg"  alt="" style="width:200px; height:150px;"> 
 			</div>
 			<div class="panel-footer" align="center"><b> Network  </b></div>
 			');?>     
@@ -23,7 +23,7 @@
 	<div class="col-xs-6 col-md-3 " align="center">
 		<div class="panel panel-primary " >
 			<?php echo anchor('admin_con/edit_admin/CCTV/','<div class="panel-body" >
-				<img src=" '.base_url().'image/pic_admin/cctv.jpg"  style="width:200px; height:150px; "> 
+				<img src=" '.base_url().'image/pic_admin/cctv.jpg"  alt="" style="width:200px; height:150px; "> 
 			</div>
 			<div class="panel-footer" align="center"><b> CCTV </b></div>
 			');?>     
@@ -32,7 +32,7 @@
 	<div class="col-xs-6 col-md-3 " align="center">  
 		<div class="panel panel-primary " >
 			<?php echo anchor('admin_con/profile_ago/Profile_ago/','<div class="panel-body" >
-				<img src=" '.base_url().'image/pic_admin/Bee-Customized-icon.jpg"  style="width:200px; height:150px; "> 
+				<img src=" '.base_url().'image/pic_admin/Bee-Customized-icon.jpg"  alt="" style="width:200px; height:150px; "> 
 			</div>
 			<div class="panel-footer" align="center"><b> Profile_ago  </b></div>
 			');?>     

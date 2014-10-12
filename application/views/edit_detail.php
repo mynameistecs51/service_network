@@ -71,7 +71,7 @@
 					<div class="form-group col-xs-6">
 						<label for="input_picture" class="col-sm-2 control-label">picture	</label>
 						<div class="col-sm-8">
-							<img id="show_pic" src="<?php echo base_url().'image/pic_sale/'.$detail_row->pic_name;?>" style="width:130px; height:70px" /><br/>
+							<img id="show_pic" src="<?php echo base_url().'image/pic_sale/'.$detail_row->pic_name;?>" alt="" style="width:130px; height:70px" /><br/>
 							<input type="file" id="userfile" class="form-control" name="userfile" size="20" onchange="PreviewImage();" multiple value="xxxxxxx" />
 						</div>
 					</div>

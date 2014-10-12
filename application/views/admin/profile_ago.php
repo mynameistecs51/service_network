@@ -71,7 +71,7 @@
 					<div class="form-group col-xs-6">
 						<label for="input_picture" class="col-sm-2 control-label">picture	</label>
 						<div class="col-sm-8">
-							<img id="show_pic" src="<?php echo base_url().'image/pic_admin/no-image.jpg';?>" style="width:130px; height:70px" /><br/>
+							<img id="show_pic" src="<?php echo base_url().'image/pic_admin/no-image.jpg';?>" alt="" style="width:130px; height:70px" /><br/>
 							<input type="file" id="images" class="form-control" name="images[]" size="20" onchange="PreviewImage();" multiple/>
 						</div>
 					</div>
@@ -109,7 +109,7 @@
 								$picture_name_array = explode(',', $service_group_value->pic_name);
 								foreach ($picture_name_array as $key => $value) {
 									?>
-									<img src="<?php echo base_url()."image/pic_sale/".$value ;?>" width=100px height=70px>
+									<img src="<?php echo base_url()."image/pic_sale/".$value ;?>" alt="" width=100px height=70px>
 									<?php 
 								}
 								?>
