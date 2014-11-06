@@ -65,7 +65,7 @@
 					<div class="form-group col-xs-6">
 						<label for="input_detail" class="col-sm-2 control-label">detail	</label>
 						<div class="col-sm-8">
-							<textarea class="form-control" rows="3" id="input_detail" name="input_detail"></textarea>
+							<textarea class="form-control" rows="4" cols="10" id="input_detail" name="input_detail" style="margin: 0px -5.34375px 0px 0px; height: 153px; width: 208px;"></textarea>
 						</div>
 					</div>
 					<div class="form-group col-xs-6">
@@ -102,7 +102,7 @@
 						echo "#";
 						echo "</td>";
 						echo "<td width=400px>";
-								echo $service_group_value->detail_text;		//โชว์ รายละเอียด
+								echo character_limiter($service_group_value->detail_text,80);		//โชว์ รายละเอียด
 								echo "</td>";
 								echo "<td>";	
 								echo "<img src=".base_url()."image/pic_sale/".$service_group_value->pic_name." alt=''  width=100px height=70px>";			///โชว์รูปภาพ
